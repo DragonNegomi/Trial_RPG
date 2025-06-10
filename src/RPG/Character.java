@@ -1,3 +1,5 @@
+package RPG;
+
 /**
  * This class represents a character in the game
  */

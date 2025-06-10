@@ -1,3 +1,5 @@
+package RPG;
+
 import java.util.ArrayList;
 
 /**
@@ -9,8 +11,9 @@ public class Room {
     private String name;
     private ArrayList<Room> rooms;
 
+
     /**
-     * Creates a new room
+     * Constructor for room object
      * @param name Name of the room e.g. Kitchen
      */
     public Room(String name) {
