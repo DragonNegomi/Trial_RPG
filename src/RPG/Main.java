@@ -27,6 +27,7 @@ public class Main {
         frame.add(containerPanel);
 
         frame.pack();
+        frame.setSize(800, 600);
         frame.setVisible(true);
     }
 }
