@@ -1,4 +1,4 @@
-package RPG;
+package RPG.items;
 
 /**
  * This class represents an item in the game

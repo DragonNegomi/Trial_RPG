@@ -1,4 +1,4 @@
-package RPG;
+package RPG.characters;
 
 /**
  * This class represents a character in the game

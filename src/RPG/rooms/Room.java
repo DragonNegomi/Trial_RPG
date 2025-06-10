@@ -1,4 +1,4 @@
-package RPG;
+package RPG.rooms;
 
 import java.util.ArrayList;
 
