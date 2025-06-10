@@ -3,7 +3,7 @@ package RPG.character;
 /**
  * This class represents a character in the game
  */
-public class Character {
+public class NonPlayerCharacter {
     private String name;
 
 
@@ -12,7 +12,7 @@ public class Character {
      * Sets name of character
      * @param name Name of character
      */
-    public Character(String name) {
+    public NonPlayerCharacter(String name) {
         setName(name);
     }
 
