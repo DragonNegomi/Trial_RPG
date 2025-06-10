@@ -13,12 +13,18 @@ public class Player {
     private Integer playerExperience;
     private Integer playerHealth;
     private Integer playerMoney;
-    private Integer playerStrength;
-    private Integer playerDexterity;
-    private Integer playerIntelligence;
-    private Integer playerCharisma;
-    private Integer playerConstitution;
-    private Integer playerWisdom;
+    private Integer playerBaseStrength;
+    private Integer playerBaseDexterity;
+    private Integer playerBaseConstitution;
+    private Integer playerBaseIntelligence;
+    private Integer playerBaseWisdom;
+    private Integer playerBaseCharisma;
+    private Integer playerExtraStrength;
+    private Integer playerExtraDexterity;
+    private Integer playerExtraConstitution;
+    private Integer playerExtraIntelligence;
+    private Integer playerExtraWisdom;
+    private Integer playerExtraCharisma;
     private Item playerHead;
     private Item playerBody;
     private Item playerLegs;
@@ -27,7 +33,7 @@ public class Player {
     private ArrayList<Item> inventory;
 
 
-    public Player(String playerName, String playerRace, String playerClass, Integer playerLevel, Integer playerExperience, Integer playerHealth, Integer playerMoney, Integer playerStrength, Integer playerDexterity, Integer playerIntelligence, Integer playerCharisma, Integer playerConstitution, Integer playerWisdom, Item playerHead, Item playerBody, Item playerLegs, Item playerShoes, Item playerHands) {
+    public Player(String playerName, String playerRace, String playerClass, Integer playerLevel, Integer playerExperience, Integer playerHealth, Integer playerMoney, Integer playerBaseStrength, Integer playerBaseDexterity, Integer playerBaseIntelligence, Integer playerBaseCharisma, Integer playerBaseConstitution, Integer playerBaseWisdom, Item playerHead, Item playerBody, Item playerLegs, Item playerShoes, Item playerHands) {
         setPlayerName(playerName);
         setPlayerRace(playerRace);
         setPlayerClass(playerClass);
@@ -35,12 +41,18 @@ public class Player {
         setPlayerExperience(playerExperience);
         setPlayerHealth(playerHealth);
         setPlayerMoney(playerMoney);
-        setPlayerStrength(playerStrength);
-        setPlayerDexterity(playerDexterity);
-        setPlayerIntelligence(playerIntelligence);
-        setPlayerCharisma(playerCharisma);
-        setPlayerConstitution(playerConstitution);
-        setPlayerWisdom(playerWisdom);
+        setPlayerBaseStrength(playerBaseStrength);
+        setPlayerBaseDexterity(playerBaseDexterity);
+        setPlayerBaseConstitution(playerBaseConstitution);
+        setPlayerBaseIntelligence(playerBaseIntelligence);
+        setPlayerBaseWisdom(playerBaseWisdom);
+        setPlayerBaseCharisma(playerBaseCharisma);
+        setPlayerExtraStrength(0);
+        setPlayerExtraDexterity(0);
+        setPlayerExtraConstitution(0);
+        setPlayerExtraIntelligence(0);
+        setPlayerExtraWisdom(0);
+        setPlayerExtraCharisma(0);
         setPlayerHead(playerHead);
         setPlayerBody(playerBody);
         setPlayerLegs(playerLegs);
@@ -61,27 +73,36 @@ public class Player {
         setPlayerExperience(0);
         setPlayerHealth(0);
         setPlayerMoney(0);
-        setPlayerStrength(0);
-        setPlayerDexterity(0);
-        setPlayerIntelligence(0);
-        setPlayerCharisma(0);
-        setPlayerConstitution(0);
-        setPlayerWisdom(0);
+        setPlayerBaseStrength(0);
+        setPlayerBaseDexterity(0);
+        setPlayerBaseConstitution(0);
+        setPlayerBaseIntelligence(0);
+        setPlayerBaseWisdom(0);
+        setPlayerBaseCharisma(0);
+        setPlayerExtraStrength(0);
+        setPlayerExtraDexterity(0);
+        setPlayerExtraConstitution(0);
+        setPlayerExtraIntelligence(0);
+        setPlayerExtraWisdom(0);
+        setPlayerExtraCharisma(0);
         setPlayerHead(null);
         setPlayerBody(null);
         setPlayerLegs(null);
         setPlayerShoes(null);
         setPlayerHands(null);
+        setInventory(new ArrayList<>());
     }
+
 
 
     // Getters and setters
 
 
+    // Base player info
+
     public String getPlayerName() {
         return playerName;
     }
-
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
@@ -89,7 +110,6 @@ public class Player {
     public String getPlayerRace() {
         return playerRace;
     }
-
     public void setPlayerRace(String playerRace) {
         this.playerRace = playerRace;
     }
@@ -97,63 +117,13 @@ public class Player {
     public String getPlayerClass() {
         return playerClass;
     }
-
     public void setPlayerClass(String playerClass) {
         this.playerClass = playerClass;
-    }
-
-    public Integer getPlayerCharisma() {
-        return playerCharisma;
-    }
-
-    public void setPlayerCharisma(Integer playerCharisma) {
-        this.playerCharisma = playerCharisma;
-    }
-
-    public Integer getPlayerIntelligence() {
-        return playerIntelligence;
-    }
-
-    public void setPlayerIntelligence(Integer playerIntelligence) {
-        this.playerIntelligence = playerIntelligence;
-    }
-
-    public Integer getPlayerDexterity() {
-        return playerDexterity;
-    }
-
-    public void setPlayerDexterity(Integer playerDexterity) {
-        this.playerDexterity = playerDexterity;
-    }
-
-    public Integer getPlayerStrength() {
-        return playerStrength;
-    }
-
-    public void setPlayerStrength(Integer playerStrength) {
-        this.playerStrength = playerStrength;
-    }
-
-    public Integer getPlayerMoney() {
-        return playerMoney;
-    }
-
-    public void setPlayerMoney(Integer playerMoney) {
-        this.playerMoney = playerMoney;
-    }
-
-    public Integer getPlayerHealth() {
-        return playerHealth;
-    }
-
-    public void setPlayerHealth(Integer playerHealth) {
-        this.playerHealth = playerHealth;
     }
 
     public Integer getPlayerLevel() {
         return playerLevel;
     }
-
     public void setPlayerLevel(Integer playerLevel) {
         this.playerLevel = playerLevel;
     }
@@ -161,26 +131,138 @@ public class Player {
     public Integer getPlayerExperience() {
         return playerExperience;
     }
-
     public void setPlayerExperience(Integer playerExperience) {
         this.playerExperience = playerExperience;
     }
 
-    public Integer getPlayerConstitution() {
-        return playerConstitution;
+    public Integer getPlayerHealth() {
+        return playerHealth;
+    }
+    public void setPlayerHealth(Integer playerHealth) {
+        this.playerHealth = playerHealth;
     }
 
-    public void setPlayerConstitution(Integer playerConstitution) {
-        this.playerConstitution = playerConstitution;
+    public Integer getPlayerMoney() {
+        return playerMoney;
+    }
+    public void setPlayerMoney(Integer playerMoney) {
+        this.playerMoney = playerMoney;
     }
 
-    public Integer getPlayerWisdom() {
-        return playerWisdom;
+
+    // Base stat values
+
+    public Integer getPlayerBaseStrength() {
+        return playerBaseStrength;
+    }
+    public void setPlayerBaseStrength(Integer playerBaseStrength) {
+        this.playerBaseStrength = playerBaseStrength;
     }
 
-    public void setPlayerWisdom(Integer playerWisdom) {
-        this.playerWisdom = playerWisdom;
+    public Integer getPlayerBaseDexterity() {
+        return playerBaseDexterity;
     }
+    public void setPlayerBaseDexterity(Integer playerBaseDexterity) {
+        this.playerBaseDexterity = playerBaseDexterity;
+    }
+
+    public Integer getPlayerBaseConstitution() {
+        return playerBaseConstitution;
+    }
+    public void setPlayerBaseConstitution(Integer playerBaseConstitution) {
+        this.playerBaseConstitution = playerBaseConstitution;
+    }
+
+    public Integer getPlayerBaseIntelligence() {
+        return playerBaseIntelligence;
+    }
+    public void setPlayerBaseIntelligence(Integer playerBaseIntelligence) {
+        this.playerBaseIntelligence = playerBaseIntelligence;
+    }
+
+    public Integer getPlayerBaseWisdom() {
+        return playerBaseWisdom;
+    }
+    public void setPlayerBaseWisdom(Integer playerBaseWisdom) {
+        this.playerBaseWisdom = playerBaseWisdom;
+    }
+
+    public Integer getPlayerBaseCharisma() {
+        return playerBaseCharisma;
+    }
+    public void setPlayerBaseCharisma(Integer playerBaseCharisma) {
+        this.playerBaseCharisma = playerBaseCharisma;
+    }
+
+
+    // Extra stat values
+
+    public Integer getPlayerExtraStrength() {
+        return playerExtraStrength;
+    }
+    public void setPlayerExtraStrength(Integer playerExtraStrength) {
+        this.playerExtraStrength = playerExtraStrength;
+    }
+
+    public Integer getPlayerExtraDexterity() {
+        return playerExtraDexterity;
+    }
+    public void setPlayerExtraDexterity(Integer playerExtraDexterity) {
+        this.playerExtraDexterity = playerExtraDexterity;
+    }
+
+    public Integer getPlayerExtraConstitution() {
+        return playerExtraConstitution;
+    }
+    public void setPlayerExtraConstitution(Integer playerExtraConstitution) {
+        this.playerExtraConstitution = playerExtraConstitution;
+    }
+
+    public Integer getPlayerExtraIntelligence() {
+        return playerExtraIntelligence;
+    }
+    public void setPlayerExtraIntelligence(Integer playerExtraIntelligence) {
+        this.playerExtraIntelligence = playerExtraIntelligence;
+    }
+
+    public Integer getPlayerExtraWisdom() {
+        return playerExtraWisdom;
+    }
+    public void setPlayerExtraWisdom(Integer playerExtraWisdom) {
+        this.playerExtraWisdom = playerExtraWisdom;
+    }
+
+    public Integer getPlayerExtraCharisma() {
+        return playerExtraCharisma;
+    }
+    public void setPlayerExtraCharisma(Integer playerExtraCharisma) {
+        this.playerExtraCharisma = playerExtraCharisma;
+    }
+
+
+    // Actual stat values (getters only)
+
+    public Integer getActualStrength() {
+        return playerBaseStrength + playerExtraStrength;
+    }
+    public Integer getActualDexterity() {
+        return playerBaseDexterity + playerExtraDexterity;
+    }
+    public Integer getActualConstitution() {
+        return playerBaseConstitution + playerExtraConstitution;
+    }
+    public Integer getActualIntelligence() {
+        return playerBaseIntelligence + playerExtraIntelligence;
+    }
+    public Integer getActualWisdom() {
+        return playerBaseWisdom + playerExtraWisdom;
+    }
+    public Integer getActualCharisma() {
+        return playerBaseCharisma + playerExtraCharisma;
+    }
+
+
+    // Equipped items
 
     public Item getPlayerHead() {
         return playerHead;
@@ -221,6 +303,9 @@ public class Player {
     public void setPlayerHands(Item playerHands) {
         this.playerHands = playerHands;
     }
+
+
+    // Inventory including add and remove methods
 
     public ArrayList<Item> getInventory() {
         return inventory;
