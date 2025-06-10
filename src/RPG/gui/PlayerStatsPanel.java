@@ -37,12 +37,12 @@ public class PlayerStatsPanel extends JPanel{
         JLabel playerExperience = new JLabel("    Experience: " + player.getPlayerExperience());
         JLabel playerHealth = new JLabel("    Health: " + player.getPlayerHealth());
         JLabel playerMoney = new JLabel("    Money: " + player.getPlayerMoney());
-        JLabel playerStrength = new JLabel("Strength: " + player.getPlayerStrength());
-        JLabel playerDexterity = new JLabel("    Dexterity: " + player.getPlayerDexterity());
-        JLabel playerConstitution = new JLabel("    Constitution: " + player.getPlayerConstitution());
-        JLabel playerIntelligence = new JLabel("    Intelligence: " + player.getPlayerIntelligence());
-        JLabel playerWisdom = new JLabel("    Wisdom: " + player.getPlayerWisdom());
-        JLabel playerCharisma = new JLabel("    Charisma: " + player.getPlayerCharisma());
+        JLabel playerStrength = new JLabel("Strength: " + player.getPlayerActualStrength());
+        JLabel playerDexterity = new JLabel("    Dexterity: " + player.getPlayerActualDexterity());
+        JLabel playerConstitution = new JLabel("    Constitution: " + player.getPlayerActualConstitution());
+        JLabel playerIntelligence = new JLabel("    Intelligence: " + player.getPlayerActualIntelligence());
+        JLabel playerWisdom = new JLabel("    Wisdom: " + player.getPlayerActualWisdom());
+        JLabel playerCharisma = new JLabel("    Charisma: " + player.getPlayerActualCharisma());
         //playerCharisma.setForeground(Color.ORANGE);
         //playerCharisma.setOpaque(true);
         //playerCharisma.setBackground(Color.BLUE);
