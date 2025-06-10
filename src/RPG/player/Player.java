@@ -2,6 +2,8 @@ package RPG.player;
 
 import RPG.item.Item;
 
+import java.util.ArrayList;
+
 public class Player {
 
     private String playerName;
@@ -22,6 +24,7 @@ public class Player {
     private Item playerLegs;
     private Item playerShoes;
     private Item playerHands;
+    private ArrayList<Item> inventory;
 
 
     public Player(String playerName, String playerRace, String playerClass, Integer playerLevel, Integer playerExperience, Integer playerHealth, Integer playerMoney, Integer playerStrength, Integer playerDexterity, Integer playerIntelligence, Integer playerCharisma, Integer playerConstitution, Integer playerWisdom, Item playerHead, Item playerBody, Item playerLegs, Item playerShoes, Item playerHands) {
@@ -43,6 +46,7 @@ public class Player {
         setPlayerLegs(playerLegs);
         setPlayerShoes(playerShoes);
         setPlayerHands(playerHands);
+        inventory = new ArrayList<>();
     }
 
 
@@ -216,5 +220,21 @@ public class Player {
 
     public void setPlayerHands(Item playerHands) {
         this.playerHands = playerHands;
+    }
+
+    public ArrayList<Item> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList<Item> inventory) {
+        this.inventory = inventory;
+    }
+
+    public void addToInventory(Item item) {
+        inventory.add(item);
+    }
+
+    public void removeFromInventory(Item item) {
+        inventory.remove(item);
     }
 }
