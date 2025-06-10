@@ -242,22 +242,22 @@ public class Player {
 
     // Actual stat values (getters only)
 
-    public Integer getActualStrength() {
+    public Integer getPlayerActualStrength() {
         return playerBaseStrength + playerExtraStrength;
     }
-    public Integer getActualDexterity() {
+    public Integer getPlayerActualDexterity() {
         return playerBaseDexterity + playerExtraDexterity;
     }
-    public Integer getActualConstitution() {
+    public Integer getPlayerActualConstitution() {
         return playerBaseConstitution + playerExtraConstitution;
     }
-    public Integer getActualIntelligence() {
+    public Integer getPlayerActualIntelligence() {
         return playerBaseIntelligence + playerExtraIntelligence;
     }
-    public Integer getActualWisdom() {
+    public Integer getPlayerActualWisdom() {
         return playerBaseWisdom + playerExtraWisdom;
     }
-    public Integer getActualCharisma() {
+    public Integer getPlayerActualCharisma() {
         return playerBaseCharisma + playerExtraCharisma;
     }
 
