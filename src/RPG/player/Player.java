@@ -33,7 +33,7 @@ public class Player {
     private ArrayList<Item> inventory;
 
 
-    public Player(String playerName, String playerRace, String playerClass, Integer playerLevel, Integer playerExperience, Integer playerHealth, Integer playerMoney, Integer playerBaseStrength, Integer playerBaseDexterity, Integer playerBaseIntelligence, Integer playerBaseCharisma, Integer playerBaseConstitution, Integer playerBaseWisdom, Item playerHead, Item playerBody, Item playerLegs, Item playerShoes, Item playerHands) {
+    public Player(String playerName, String playerRace, String playerClass, Integer playerLevel, Integer playerExperience, Integer playerHealth, Integer playerMoney, Integer playerBaseStrength, Integer playerBaseDexterity, Integer playerBaseConstitution, Integer playerBaseIntelligence, Integer playerBaseWisdom, Integer playerBaseCharisma, Item playerHead, Item playerBody, Item playerLegs, Item playerShoes, Item playerHands) {
         setPlayerName(playerName);
         setPlayerRace(playerRace);
         setPlayerClass(playerClass);
