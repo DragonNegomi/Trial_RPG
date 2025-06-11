@@ -29,7 +29,7 @@ public class PlayerStatsPanel extends JPanel{
         //playerAttributes.setBackground(Color.LIGHT_GRAY);
         //setBackground(Color.GRAY);
 
-        // Creates labels for each player attribute
+        // Creates labels for each player base info
         JLabel playerName = new JLabel("Name: " + player.getPlayerName());
         JLabel playerRace = new JLabel("    Race: " + player.getPlayerRace());
         JLabel playerClass = new JLabel("    Class: " + player.getPlayerClass());
@@ -37,12 +37,55 @@ public class PlayerStatsPanel extends JPanel{
         JLabel playerExperience = new JLabel("    Experience: " + player.getPlayerExperience());
         JLabel playerHealth = new JLabel("    Health: " + player.getPlayerHealth());
         JLabel playerMoney = new JLabel("    Money: " + player.getPlayerMoney());
-        JLabel playerStrength = new JLabel("Strength: " + player.getPlayerActualStrength());
-        JLabel playerDexterity = new JLabel("    Dexterity: " + player.getPlayerActualDexterity());
-        JLabel playerConstitution = new JLabel("    Constitution: " + player.getPlayerActualConstitution());
-        JLabel playerIntelligence = new JLabel("    Intelligence: " + player.getPlayerActualIntelligence());
-        JLabel playerWisdom = new JLabel("    Wisdom: " + player.getPlayerActualWisdom());
-        JLabel playerCharisma = new JLabel("    Charisma: " + player.getPlayerActualCharisma());
+        // Creates strength label including extra if any
+        JLabel playerStrength;
+        if (player.getPlayerExtraStrength()==0) {
+            playerStrength = new JLabel("Strength: " + player.getPlayerActualStrength());
+        }
+        else {
+            playerStrength = new JLabel("Strength: " + player.getPlayerActualStrength() + " (" + player.getPlayerExtraStrengthString() + ")");
+        }
+        // Creates dexterity label including extra if any
+        JLabel playerDexterity;
+        if (player.getPlayerExtraDexterity()==0) {
+            playerDexterity = new JLabel("    Dexterity: " + player.getPlayerActualDexterity());
+        }
+        else {
+            playerDexterity = new JLabel ("    Dexterity: " + player.getPlayerActualDexterity() + " (" + player.getPlayerExtraDexterityString() + ")");
+        }
+        // Creates constitution label including extra if any
+        JLabel playerConstitution;
+        if (player.getPlayerExtraConstitution()==0) {
+            playerConstitution = new JLabel("    Constitution: " + player.getPlayerActualConstitution());
+        }
+        else {
+            playerConstitution = new JLabel("    Constitution: " + player.getPlayerActualConstitution() + " (" + player.getPlayerExtraConstitutionString() + ")");
+        }
+        // Creates intelligence label including extra if any
+        JLabel playerIntelligence;
+        if (player.getPlayerExtraIntelligence()==0) {
+            playerIntelligence = new JLabel("    Intelligence: " + player.getPlayerActualIntelligence());
+        }
+        else {
+            playerIntelligence = new JLabel("    Intelligence: " + player.getPlayerActualIntelligence() + " (" + player.getPlayerExtraIntelligenceString() + ")");
+        }
+        // Creates wisdom label including extra if any
+        JLabel playerWisdom;
+        if (player.getPlayerExtraWisdom()==0) {
+            playerWisdom = new JLabel("    Wisdom: " + player.getPlayerActualWisdom());
+        }
+        else {
+            playerWisdom = new JLabel("    Wisdom: " + player.getPlayerActualWisdom() + " (" + player.getPlayerExtraWisdomString() + ")");
+        }
+        // Creates charisma label including extra if any
+        JLabel playerCharisma;
+        if (player.getPlayerExtraCharisma()==0) {
+            playerCharisma = new JLabel("    Charisma: " + player.getPlayerActualCharisma());
+        }
+        else {
+            playerCharisma = new JLabel("    Charisma: " + player.getPlayerActualCharisma() + " (" + player.getPlayerExtraCharismaString() + ")");
+
+        }
         //playerCharisma.setForeground(Color.ORANGE);
         //playerCharisma.setOpaque(true);
         //playerCharisma.setBackground(Color.BLUE);
