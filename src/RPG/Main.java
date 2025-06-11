@@ -16,7 +16,9 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // PlayerStatsPanel
-        Player player = new Player("Bob", "Human", "Monk", 5, 3, 10, 56, 8, 7, 9, 10, 6, 14, null, null, null, null, null);
+        Player player = new Player("Bob", "Human", "Monk", 5, 3, 10, 56, 8, 9, 10, 11, 12, 13, null, null, null, null, null);
+        player.setPlayerExtraStrength(2);
+        player.setPlayerExtraWisdom(-1);
         PlayerStatsPanel playerStatsPanel = new PlayerStatsPanel(player);
         // RoomDetailsPanel
         Room room = new Room("K", "A large kitchen----------------");
