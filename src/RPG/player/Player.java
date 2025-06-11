@@ -195,10 +195,18 @@ public class Player {
     }
 
 
-    // Extra stat values
+    // Extra stat values including string form
 
     public Integer getPlayerExtraStrength() {
         return playerExtraStrength;
+    }
+    public String getPlayerExtraStrengthString() {
+        if (getPlayerExtraStrength() >= 0) {
+            return "+" + getPlayerExtraStrength();
+        }
+        else {
+            return getPlayerExtraStrength().toString();
+        }
     }
     public void setPlayerExtraStrength(Integer playerExtraStrength) {
         this.playerExtraStrength = playerExtraStrength;
@@ -207,12 +215,28 @@ public class Player {
     public Integer getPlayerExtraDexterity() {
         return playerExtraDexterity;
     }
+    public String getPlayerExtraDexterityString() {
+        if (getPlayerExtraDexterity() >= 0) {
+            return "+" + getPlayerExtraDexterity();
+        }
+        else {
+            return getPlayerExtraDexterity().toString();
+        }
+    }
     public void setPlayerExtraDexterity(Integer playerExtraDexterity) {
         this.playerExtraDexterity = playerExtraDexterity;
     }
 
     public Integer getPlayerExtraConstitution() {
         return playerExtraConstitution;
+    }
+    public String getPlayerExtraConstitutionString() {
+        if (getPlayerExtraConstitution() >= 0) {
+            return "+" + getPlayerExtraConstitution();
+        }
+        else {
+            return getPlayerExtraConstitution().toString();
+        }
     }
     public void setPlayerExtraConstitution(Integer playerExtraConstitution) {
         this.playerExtraConstitution = playerExtraConstitution;
@@ -221,6 +245,14 @@ public class Player {
     public Integer getPlayerExtraIntelligence() {
         return playerExtraIntelligence;
     }
+    public String getPlayerExtraIntelligenceString() {
+        if (getPlayerExtraIntelligence() >= 0) {
+            return "+" + getPlayerExtraIntelligence();
+        }
+        else {
+            return getPlayerExtraIntelligence().toString();
+        }
+    }
     public void setPlayerExtraIntelligence(Integer playerExtraIntelligence) {
         this.playerExtraIntelligence = playerExtraIntelligence;
     }
@@ -228,12 +260,28 @@ public class Player {
     public Integer getPlayerExtraWisdom() {
         return playerExtraWisdom;
     }
+    public String getPlayerExtraWisdomString() {
+        if (getPlayerExtraWisdom() >= 0) {
+            return "+" + getPlayerExtraWisdom();
+        }
+        else {
+            return getPlayerExtraWisdom().toString();
+        }
+    }
     public void setPlayerExtraWisdom(Integer playerExtraWisdom) {
         this.playerExtraWisdom = playerExtraWisdom;
     }
 
     public Integer getPlayerExtraCharisma() {
         return playerExtraCharisma;
+    }
+    public String getPlayerExtraCharismaString() {
+        if (getPlayerExtraCharisma() >= 0) {
+            return "+" + getPlayerExtraCharisma();
+        }
+        else {
+            return getPlayerExtraCharisma().toString();
+        }
     }
     public void setPlayerExtraCharisma(Integer playerExtraCharisma) {
         this.playerExtraCharisma = playerExtraCharisma;
