@@ -62,6 +62,34 @@ public class Player {
         inventory = new ArrayList<>();
     }
 
+    public Player(String playerName, String playerRace, String playerClass, Integer playerBaseStrength, Integer playerBaseDexterity, Integer playerBaseConstitution, Integer playerBaseIntelligence, Integer playerBaseWisdom, Integer playerBaseCharisma) {
+        setPlayerName(playerName);
+        setPlayerRace(playerRace);
+        setPlayerClass(playerClass);
+        setPlayerLevel(1);
+        setPlayerExperience(0);
+        setPlayerHealth(10);
+        setPlayerMoney(0);
+        setPlayerBaseStrength(playerBaseStrength);
+        setPlayerBaseDexterity(playerBaseDexterity);
+        setPlayerBaseConstitution(playerBaseConstitution);
+        setPlayerBaseIntelligence(playerBaseIntelligence);
+        setPlayerBaseWisdom(playerBaseWisdom);
+        setPlayerBaseCharisma(playerBaseCharisma);
+        setPlayerExtraStrength(0);
+        setPlayerExtraDexterity(0);
+        setPlayerExtraConstitution(0);
+        setPlayerExtraIntelligence(0);
+        setPlayerExtraWisdom(0);
+        setPlayerExtraCharisma(0);
+        Item empty = new Item("None", "");
+        setPlayerHead(empty);
+        setPlayerChest(empty);
+        setPlayerLegs(empty);
+        setPlayerFeet(empty);
+        setPlayerHands(empty);
+        inventory = new ArrayList<>();
+    }
 
     /**
      * Resets all variables to "", 0 or null
