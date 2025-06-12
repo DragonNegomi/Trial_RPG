@@ -45,50 +45,37 @@ public class PlayerStatsPanel extends JPanel{
         if (player.getPlayerExtraStrength()==0) {
             playerStrength = new JLabel("Strength: " + player.getPlayerActualStrength());
         }
-        else {
-            playerStrength = new JLabel("Strength: " + player.getPlayerActualStrength() + " (" + player.getPlayerExtraStrengthString() + ")");
-        }
+        else {playerStrength = new JLabel("Strength: " + player.getPlayerActualStrength() + " (" + player.getPlayerExtraStrengthString() + ")");}
         // Creates dexterity label including extra if any
         JLabel playerDexterity;
         if (player.getPlayerExtraDexterity()==0) {
             playerDexterity = new JLabel("    Dexterity: " + player.getPlayerActualDexterity());
         }
-        else {
-            playerDexterity = new JLabel ("    Dexterity: " + player.getPlayerActualDexterity() + " (" + player.getPlayerExtraDexterityString() + ")");
-        }
+        else {playerDexterity = new JLabel ("    Dexterity: " + player.getPlayerActualDexterity() + " (" + player.getPlayerExtraDexterityString() + ")");}
         // Creates constitution label including extra if any
         JLabel playerConstitution;
         if (player.getPlayerExtraConstitution()==0) {
             playerConstitution = new JLabel("    Constitution: " + player.getPlayerActualConstitution());
         }
-        else {
-            playerConstitution = new JLabel("    Constitution: " + player.getPlayerActualConstitution() + " (" + player.getPlayerExtraConstitutionString() + ")");
-        }
+        else {playerConstitution = new JLabel("    Constitution: " + player.getPlayerActualConstitution() + " (" + player.getPlayerExtraConstitutionString() + ")");}
         // Creates intelligence label including extra if any
         JLabel playerIntelligence;
         if (player.getPlayerExtraIntelligence()==0) {
             playerIntelligence = new JLabel("    Intelligence: " + player.getPlayerActualIntelligence());
         }
-        else {
-            playerIntelligence = new JLabel("    Intelligence: " + player.getPlayerActualIntelligence() + " (" + player.getPlayerExtraIntelligenceString() + ")");
-        }
+        else {playerIntelligence = new JLabel("    Intelligence: " + player.getPlayerActualIntelligence() + " (" + player.getPlayerExtraIntelligenceString() + ")");}
         // Creates wisdom label including extra if any
         JLabel playerWisdom;
         if (player.getPlayerExtraWisdom()==0) {
             playerWisdom = new JLabel("    Wisdom: " + player.getPlayerActualWisdom());
         }
-        else {
-            playerWisdom = new JLabel("    Wisdom: " + player.getPlayerActualWisdom() + " (" + player.getPlayerExtraWisdomString() + ")");
-        }
+        else {playerWisdom = new JLabel("    Wisdom: " + player.getPlayerActualWisdom() + " (" + player.getPlayerExtraWisdomString() + ")");}
         // Creates charisma label including extra if any
         JLabel playerCharisma;
         if (player.getPlayerExtraCharisma()==0) {
             playerCharisma = new JLabel("    Charisma: " + player.getPlayerActualCharisma());
         }
-        else {
-            playerCharisma = new JLabel("    Charisma: " + player.getPlayerActualCharisma() + " (" + player.getPlayerExtraCharismaString() + ")");
-
-        }
+        else {playerCharisma = new JLabel("    Charisma: " + player.getPlayerActualCharisma() + " (" + player.getPlayerExtraCharismaString() + ")");}
         //playerCharisma.setForeground(Color.ORANGE);
         //playerCharisma.setOpaque(true);
         //playerCharisma.setBackground(Color.BLUE);
