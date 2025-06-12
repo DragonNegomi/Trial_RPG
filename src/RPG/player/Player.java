@@ -26,14 +26,15 @@ public class Player {
     private Integer playerExtraWisdom;
     private Integer playerExtraCharisma;
     private Item playerHead;
-    private Item playerBody;
+    private Item playerChest;
     private Item playerLegs;
-    private Item playerShoes;
+    private Item playerFeet;
     private Item playerHands;
     private ArrayList<Item> inventory;
 
 
-    public Player(String playerName, String playerRace, String playerClass, Integer playerLevel, Integer playerExperience, Integer playerHealth, Integer playerMoney, Integer playerBaseStrength, Integer playerBaseDexterity, Integer playerBaseConstitution, Integer playerBaseIntelligence, Integer playerBaseWisdom, Integer playerBaseCharisma, Item playerHead, Item playerBody, Item playerLegs, Item playerShoes, Item playerHands) {
+    // All passed in bar inventory
+    public Player(String playerName, String playerRace, String playerClass, Integer playerLevel, Integer playerExperience, Integer playerHealth, Integer playerMoney, Integer playerBaseStrength, Integer playerBaseDexterity, Integer playerBaseConstitution, Integer playerBaseIntelligence, Integer playerBaseWisdom, Integer playerBaseCharisma, Item playerHead, Item playerChest, Item playerLegs, Item playerFeet, Item playerHands) {
         setPlayerName(playerName);
         setPlayerRace(playerRace);
         setPlayerClass(playerClass);
@@ -54,9 +55,9 @@ public class Player {
         setPlayerExtraWisdom(0);
         setPlayerExtraCharisma(0);
         setPlayerHead(playerHead);
-        setPlayerBody(playerBody);
+        setPlayerChest(playerChest);
         setPlayerLegs(playerLegs);
-        setPlayerShoes(playerShoes);
+        setPlayerFeet(playerFeet);
         setPlayerHands(playerHands);
         inventory = new ArrayList<>();
     }
@@ -86,9 +87,9 @@ public class Player {
         setPlayerExtraWisdom(0);
         setPlayerExtraCharisma(0);
         setPlayerHead(null);
-        setPlayerBody(null);
+        setPlayerChest(null);
         setPlayerLegs(null);
-        setPlayerShoes(null);
+        setPlayerFeet(null);
         setPlayerHands(null);
         setInventory(new ArrayList<>());
     }
@@ -320,12 +321,12 @@ public class Player {
         this.playerHead = playerHead;
     }
 
-    public Item getPlayerBody() {
-        return playerBody;
+    public Item getPlayerChest() {
+        return playerChest;
     }
 
-    public void setPlayerBody(Item playerBody) {
-        this.playerBody = playerBody;
+    public void setPlayerChest(Item playerChest) {
+        this.playerChest = playerChest;
     }
 
     public Item getPlayerLegs() {
@@ -336,12 +337,12 @@ public class Player {
         this.playerLegs = playerLegs;
     }
 
-    public Item getPlayerShoes() {
-        return playerShoes;
+    public Item getPlayerFeet() {
+        return playerFeet;
     }
 
-    public void setPlayerShoes(Item playerShoes) {
-        this.playerShoes = playerShoes;
+    public void setPlayerFeet(Item playerFeet) {
+        this.playerFeet = playerFeet;
     }
 
     public Item getPlayerHands() {
