@@ -6,6 +6,8 @@ import RPG.room.Room;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 public class Main {
     public static void main(String[] args) {
@@ -53,7 +55,23 @@ public class Main {
 
         // Packs frame, sets size and makes visible
         frame.pack();
+        //frame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         frame.setSize(800, 600);
+        //frame.setMinimumSize(new Dimension(800, 600));
+        //frame.setResizable(false);
+
+        /*frame.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e){
+                Dimension d= frame.getSize();
+                Dimension minD=frame.getMinimumSize();
+                if(d.width<minD.width)
+                    d.width=minD.width;
+                if(d.height<minD.height)
+                    d.height=minD.height;
+                frame.setSize(d);             }
+        });*/
+
         frame.setVisible(true);
     }
 }
