@@ -29,7 +29,7 @@ public class Main {
         // Create ExploreOptionsPanel
         ExploreOptionsPanel exploreOptionsPanel = new ExploreOptionsPanel();
         // Create PlayerInventoryPanel (requires player)
-        PlayerInventoryPanel playerInventoryPanel = new PlayerInventoryPanel(player);
+        PlayerItemPanel playerItemPanel = new PlayerItemPanel(player);
 
         // Create panel to contain player and room info
         JPanel innerContainerPanel = new JPanel();
@@ -44,7 +44,7 @@ public class Main {
         //innerContainerPanel.add(exploreOptionsPanel);
 
         // Adds inventory and inner container to outer container
-        outerContainerPanel.add(playerInventoryPanel);
+        outerContainerPanel.add(playerItemPanel);
         outerContainerPanel.add(innerContainerPanel);
 
         // Adds outer container to frame
