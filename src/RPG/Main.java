@@ -5,6 +5,7 @@ import RPG.player.Player;
 import RPG.room.Room;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,13 +34,13 @@ public class Main {
 
         // Create panel to contain player and room info
         JPanel innerContainerPanel = new JPanel();
-        innerContainerPanel.setLayout(new BoxLayout(innerContainerPanel, BoxLayout.Y_AXIS));
+        innerContainerPanel.setLayout(new BorderLayout());
         // Create panel to contain all other panels
         JPanel outerContainerPanel = new JPanel();
         outerContainerPanel.setLayout(new BoxLayout(outerContainerPanel, BoxLayout.X_AXIS));
 
         // Adds player and room  info to inner container panel
-        innerContainerPanel.add(playerStatsPanel);
+        innerContainerPanel.add(playerStatsPanel, BorderLayout.PAGE_START);
         innerContainerPanel.add(roomDetailsPanel);
         //innerContainerPanel.add(exploreOptionsPanel);
 
