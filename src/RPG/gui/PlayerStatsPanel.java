@@ -21,6 +21,11 @@ public class PlayerStatsPanel extends JPanel{
         JPanel playerInformation = new JPanel();
         JPanel playerAttributes = new JPanel();
 
+        // Changes colour of all panels for consistent look
+        setBackground(Color.LIGHT_GRAY);
+        playerInformation.setBackground(Color.LIGHT_GRAY);
+        playerAttributes.setBackground(Color.LIGHT_GRAY);
+
         // Set layout for panels
         playerInformation.setLayout(new BoxLayout(playerInformation, BoxLayout.X_AXIS));
         playerAttributes.setLayout(new BoxLayout(playerAttributes, BoxLayout.X_AXIS));
