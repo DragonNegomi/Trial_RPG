@@ -16,6 +16,9 @@ public class PlayerStatsPanel extends JPanel{
     public PlayerStatsPanel(Player player){
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
+        // Sets blank border
+        setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
         //setBackground(Color.BLUE);
         // Create 2 panels so attributes display in lines
         JPanel playerInformation = new JPanel();
@@ -116,10 +119,8 @@ public class PlayerStatsPanel extends JPanel{
         //playerInformation.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 0));
         //playerAttributes.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 0));
         // Adds separate panels to main panel
-        add(Box.createRigidArea(new Dimension(0, 10)));
         add(playerInformation);
         add(playerAttributes);
-        add(Box.createRigidArea(new Dimension(0, 30)));
         //setLayout(new FlowLayout(FlowLayout.CENTER, 5, 0));
         //setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
