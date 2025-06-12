@@ -16,7 +16,7 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Create player
-        Player player = new Player("Bob", "Human", "Monk", 5, 3, 10, 56, 8, 9, 10, 11, 12, 13, null, null, null, null, null);
+        Player player = new Player("Bob", "Human", "Monk", 8, 9, 10, 11, 12, 13);
         player.setPlayerExtraStrength(2);
         player.setPlayerExtraWisdom(-1);
         // Create room
