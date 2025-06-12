@@ -19,7 +19,6 @@ public class PlayerStatsPanel extends JPanel{
         // Sets blank border
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        //setBackground(Color.BLUE);
         // Create 2 panels so attributes display in lines
         JPanel playerInformation = new JPanel();
         JPanel playerAttributes = new JPanel();
@@ -32,10 +31,6 @@ public class PlayerStatsPanel extends JPanel{
         // Set layout for panels
         playerInformation.setLayout(new BoxLayout(playerInformation, BoxLayout.X_AXIS));
         playerAttributes.setLayout(new BoxLayout(playerAttributes, BoxLayout.X_AXIS));
-
-        //playerInformation.setBackground(Color.LIGHT_GRAY);
-        //playerAttributes.setBackground(Color.LIGHT_GRAY);
-        //setBackground(Color.GRAY);
 
         // Creates labels for each player base info
         JLabel playerName = new JLabel("Name: " + player.getPlayerName());
@@ -115,14 +110,8 @@ public class PlayerStatsPanel extends JPanel{
         playerAttributes.add(playerWisdom);
         playerAttributes.add(playerCharisma);
 
-        // Changes sizes to fit look
-        //playerInformation.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 0));
-        //playerAttributes.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 0));
         // Adds separate panels to main panel
         add(playerInformation);
         add(playerAttributes);
-        //setLayout(new FlowLayout(FlowLayout.CENTER, 5, 0));
-        //setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-
     }
 }
