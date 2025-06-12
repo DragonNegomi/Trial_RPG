@@ -7,9 +7,9 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 
-public class PlayerInventoryPanel extends JPanel{
+public class PlayerItemPanel extends JPanel{
 
-    public PlayerInventoryPanel(Player player){
+    public PlayerItemPanel(Player player){
         setBackground(Color.GRAY);
 
         // Creates blank border
