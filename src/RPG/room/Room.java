@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class Room {
     private String name;
     private String description;
+    private ArrayList<String> info;
     private ArrayList<NonPlayerCharacter> characters;
     private ArrayList<Item> items;
     private Room north;
@@ -32,6 +33,7 @@ public class Room {
     public Room(String name, String description, ArrayList<NonPlayerCharacter> characters, ArrayList<Item> items, Room north, Room west, Room south, Room east) {
         setName(name);
         setDescription(description);
+        setInfo(new ArrayList<>());
         setCharacters(characters);
         setItems(items);
         setNorth(north);
@@ -43,6 +45,7 @@ public class Room {
     public Room(String name, String description) {
         setName(name);
         setDescription(description);
+        setInfo(new ArrayList<>());
         setCharacters(new ArrayList<>());
         setItems(new ArrayList<>());
         setNorth(null);
@@ -54,6 +57,7 @@ public class Room {
     public Room(String name, String description, Room north, Room west, Room south, Room east) {
         setName(name);
         setDescription(description);
+        setInfo(new ArrayList<>());
         setCharacters(new ArrayList<>());
         setItems(new ArrayList<>());
         setNorth(north);
@@ -88,6 +92,14 @@ public class Room {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public ArrayList<String> getInfo() {
+        return info;
+    }
+
+    public void setInfo(ArrayList<String> info) {
+        this.info = info;
     }
 
     public ArrayList<NonPlayerCharacter> getCharacters() {
