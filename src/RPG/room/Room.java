@@ -4,6 +4,8 @@ import RPG.character.NonPlayerCharacter;
 import RPG.item.Item;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * This class is used to represent a room in the game
@@ -13,7 +15,8 @@ import java.util.ArrayList;
 public class Room {
     private String name;
     private String description;
-    private ArrayList<String> info;
+    private Map<String, String> info;
+    private ArrayList<Object> detail;
     private ArrayList<NonPlayerCharacter> characters;
     private ArrayList<Item> items;
     private Room north;
@@ -33,7 +36,8 @@ public class Room {
     public Room(String name, String description, ArrayList<NonPlayerCharacter> characters, ArrayList<Item> items, Room north, Room west, Room south, Room east) {
         setName(name);
         setDescription(description);
-        setInfo(new ArrayList<>());
+        setInfo(new LinkedHashMap<>());
+        setDetail(new ArrayList<>());
         setCharacters(characters);
         setItems(items);
         setNorth(north);
@@ -45,7 +49,8 @@ public class Room {
     public Room(String name, String description) {
         setName(name);
         setDescription(description);
-        setInfo(new ArrayList<>());
+        setInfo(new LinkedHashMap<>());
+        setDetail(new ArrayList<>());
         setCharacters(new ArrayList<>());
         setItems(new ArrayList<>());
         setNorth(null);
@@ -57,7 +62,8 @@ public class Room {
     public Room(String name, String description, Room north, Room west, Room south, Room east) {
         setName(name);
         setDescription(description);
-        setInfo(new ArrayList<>());
+        setInfo(new LinkedHashMap<>());
+        setDetail(new ArrayList<>());
         setCharacters(new ArrayList<>());
         setItems(new ArrayList<>());
         setNorth(north);
@@ -94,12 +100,20 @@ public class Room {
         this.description = description;
     }
 
-    public ArrayList<String> getInfo() {
+    public Map<String, String> getInfo() {
         return info;
     }
 
-    public void setInfo(ArrayList<String> info) {
+    public void setInfo(Map<String, String> info) {
         this.info = info;
+    }
+
+    public ArrayList<Object> getDetail() {
+        return detail;
+    }
+
+    public void setDetail(ArrayList<Object> detail) {
+        this.detail = detail;
     }
 
     public ArrayList<NonPlayerCharacter> getCharacters() {
