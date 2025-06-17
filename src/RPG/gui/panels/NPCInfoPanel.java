@@ -9,7 +9,7 @@ public class NPCInfoPanel extends JPanel {
     public NPCInfoPanel(NonPlayerCharacter NPC) {
         setBorder(BorderFactory.createTitledBorder(NPC.getName()));
 
-        JLabel nameLabel = new JLabel(NPC.getName());
-        add(nameLabel);
+        JLabel descriptionLabel = new JLabel(NPC.getDescription());
+        add(descriptionLabel);
     }
 }
