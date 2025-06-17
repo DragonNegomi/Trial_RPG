@@ -1,5 +1,6 @@
 package RPG;
 
+import RPG.character.NonPlayerCharacter;
 import RPG.gui.panels.*;
 import RPG.item.Item;
 import RPG.player.Player;
@@ -9,6 +10,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,14 +26,23 @@ public class Main {
         Player player = new Player("Bob", "Human", "Monk", 8, 9, 10, 11, 12, 13);
         player.setPlayerExtraStrength(2);
         player.setPlayerExtraWisdom(-1);
+        // Create NPCs
+        NonPlayerCharacter steve = new NonPlayerCharacter("Steve", "The barkeeper of the tavern");
         // Create items
         Item sword = new Item("Sword", "A sharp sword");
         Item bucket = new Item("Bucket", "A rusty bucket");
         // Create room
         Room room = new Room("K", "A large kitchen----------------");
+        room.addCharacter(steve);
         room.addItem(sword);
         room.addItem(bucket);
-        room.setInfo(new ArrayList<String>(Arrays.asList("Behind the", "bar", "is the barkeeper,", "Steve")));
+        room.setDetail(new ArrayList<>(Arrays.asList("Behind the", "bar", "is the barkeeper", steve)));
+        /*room.setInfo(new LinkedHashMap<>(Map.of(
+                "String","Behind the",
+                "RoomObject", "bar",
+                "String", "is the barkeeper",
+                "NPC", "Steve"
+        )));*/
 
         // Create PlayerStatsPanel (requires player)
         PlayerStatsPanel playerStatsPanel = new PlayerStatsPanel(player);
@@ -41,7 +53,7 @@ public class Main {
         // Create PlayerInventoryPanel (requires player)
         PlayerItemPanel playerItemPanel = new PlayerItemPanel(player);
         // Create RoomInfoPanel
-        RoomInfoPanel roomInfoPanel = new RoomInfoPanel(room);
+        RoomInfoPanel roomInfoPanel = new RoomInfoPanel(new CardLayout(), new JPanel(), room);
 
         // Create panel to contain player and room info
         JPanel innerContainerPanel = new JPanel();
