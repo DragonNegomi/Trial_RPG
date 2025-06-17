@@ -1,14 +1,12 @@
 package RPG;
 
-import RPG.gui.*;
+import RPG.gui.panels.*;
 import RPG.item.Item;
 import RPG.player.Player;
 import RPG.room.Room;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
 
