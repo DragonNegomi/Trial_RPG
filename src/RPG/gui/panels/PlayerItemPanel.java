@@ -1,4 +1,4 @@
-package RPG.gui;
+package RPG.gui.panels;
 
 import RPG.item.Item;
 import RPG.player.Player;
