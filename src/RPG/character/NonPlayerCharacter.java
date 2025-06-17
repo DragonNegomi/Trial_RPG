@@ -5,15 +5,18 @@ package RPG.character;
  */
 public class NonPlayerCharacter {
     private String name;
+    private String description;
 
 
     /**
      * Constructor for character object
-     * Sets name of character
+     * Sets name and description of character
      * @param name Name of character
+     * @param description Description about character
      */
-    public NonPlayerCharacter(String name) {
+    public NonPlayerCharacter(String name, String description) {
         setName(name);
+        setDescription(description);
     }
 
     /**
@@ -30,5 +33,13 @@ public class NonPlayerCharacter {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
