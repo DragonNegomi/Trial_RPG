@@ -1,11 +1,14 @@
 package RPG.character;
 
+import java.util.ArrayList;
+
 /**
  * This class represents a character in the game
  */
 public class NonPlayerCharacter {
     private String name;
     private String description;
+    private ArrayList<Object> info;
 
 
     /**
@@ -17,6 +20,13 @@ public class NonPlayerCharacter {
     public NonPlayerCharacter(String name, String description) {
         setName(name);
         setDescription(description);
+        setInfo(new ArrayList<>());
+    }
+
+    public NonPlayerCharacter(String name, String description, ArrayList<Object> info) {
+        setName(name);
+        setDescription(description);
+        setInfo(info);
     }
 
     /**
@@ -41,5 +51,13 @@ public class NonPlayerCharacter {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public ArrayList<Object> getInfo() {
+        return info;
+    }
+
+    public void setInfo(ArrayList<Object> info) {
+        this.info = info;
     }
 }
