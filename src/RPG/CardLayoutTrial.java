@@ -30,11 +30,13 @@ public class CardLayoutTrial {
         Item sword = new Item("Sword", "A sharp sword");
         Item bucket = new Item("Bucket", "A rusty bucket");
         // Create room
-        Room room = new Room("K", "A large kitchen----------------");
-        room.addCharacter(steve);
-        room.addItem(sword);
-        room.addItem(bucket);
-        room.setDetail(new ArrayList<>(Arrays.asList("Behind the", "bar", "is the barkeeper", steve)));
+        Room kitchen = new Room("Kitchen", "A large kitchen----------------");
+        kitchen.addCharacter(steve);
+        kitchen.addItem(sword);
+        kitchen.addItem(bucket);
+        kitchen.setDetail(new ArrayList<>(Arrays.asList("Behind the", "bar", "is the barkeeper", steve)));
+        // Add info to characters
+        steve.setInfo(new ArrayList<>(Arrays.asList("The barkeeper of the tavern who is in the", kitchen)));
 
 
         // Create card layout panel
@@ -47,12 +49,12 @@ public class CardLayoutTrial {
         // Create player item panel
         PlayerItemPanel playerItemPanel = new PlayerItemPanel(player);
         // Create room info panel
-        RoomInfoPanel roomInfoPanel = new RoomInfoPanel(cardLayout, infoDisplayPanel, room);
+        RoomInfoPanel roomInfoPanel = new RoomInfoPanel(cardLayout, infoDisplayPanel, kitchen);
         // Create NPC info panel
-        NPCInfoPanel steveInfoPanel = new NPCInfoPanel(steve);
+        NPCInfoPanel steveInfoPanel = new NPCInfoPanel(cardLayout, infoDisplayPanel, steve);
 
-        infoDisplayPanel.add(roomInfoPanel, "room");
-        infoDisplayPanel.add(steveInfoPanel, "Steve");
+        infoDisplayPanel.add(roomInfoPanel, kitchen.getName());
+        infoDisplayPanel.add(steveInfoPanel, steve.getName());
 
         containerPanel.add(playerItemPanel);
         containerPanel.add(infoDisplayPanel);
